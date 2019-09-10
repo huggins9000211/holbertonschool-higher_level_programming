@@ -9,5 +9,5 @@ while (index >= 97):
     else:
         tempStr = chr(index)
         capital = True
-    print(tempStr, end = '')
+    print("{}".format(tempStr), end='')
     index = index - 1
