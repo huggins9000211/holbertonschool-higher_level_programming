@@ -50,20 +50,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
  * @n: integer to be included in node
  * Return: address of the new element or NULL if it fails
  */
-listint_x *add_nodeList(listint_x **head, listint_t *n)
-{
-    listint_x *new;
 
-    new = malloc(sizeof(listint_x));
-    if (new == NULL)
-        return (NULL);
-
-    new->currentt = n;
-    new->next = *head;
-    *head = new;
-
-    return (new);
-}
 
 /**
  * free_listint - frees a listint_t list
