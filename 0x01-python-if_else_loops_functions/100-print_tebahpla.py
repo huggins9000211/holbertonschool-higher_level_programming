@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 capital = False
 index = 122
+tempStr = ''
 while (index >= 97):
     if capital:
-        print(chr(index - 32), end="")
+        tempStr = chr(index - 32)
         capital = False
     else:
-        print(chr(index), end="")
+        tempStr = chr(index)
         capital = True
+    print(tempStr, end = '')
     index = index - 1
