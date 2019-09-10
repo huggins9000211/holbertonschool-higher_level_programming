@@ -6,6 +6,7 @@ int check_cycle(listint_t *list)
     listint_t *current;
     unsigned int n; /* number of nodes */
 
+    myList = NULL;
     current = list;
     n = 0;
     while (current != NULL)
