@@ -12,7 +12,7 @@ int check_cycle(listint_t *list)
     {
         if (n == 0)
         {
-            *add_nodeList(&myList, current);
+            add_nodeList(&myList, current);
         }
         else if (checkMyList(myList, current))
         {
@@ -23,6 +23,7 @@ int check_cycle(listint_t *list)
         current = current->next;
         n++;
     }
+    return (0);
 }
 
 int checkMyList(listint_x *head, listint_t *current)
