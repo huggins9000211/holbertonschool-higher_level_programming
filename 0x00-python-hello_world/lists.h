@@ -27,7 +27,8 @@ size_t print_listint(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
 void free_listint(listint_t *head);
 int check_cycle(listint_t *list);
+
 listint_x *add_nodeList(listint_x **head, listint_t *n);
 void free_listList(listint_x *head);
 int checkMyList(listint_x *head, listint_t *current);
-#endif /* LISTS_H */
+#endif
