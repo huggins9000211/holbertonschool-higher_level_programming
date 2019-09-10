@@ -44,3 +44,18 @@ int checkMyList(listint_x *head, listint_t *current)
     return (0);
     
 }
+
+listint_x *add_nodeList(listint_x **head, listint_t *n)
+{
+    listint_x *new;
+
+    new = malloc(sizeof(listint_x));
+    if (new == NULL)
+        return (NULL);
+
+    new->currentt = n;
+    new->next = *head;
+    *head = new;
+
+    return (new);
+}
