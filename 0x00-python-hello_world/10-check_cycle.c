@@ -19,7 +19,6 @@ int check_cycle(listint_t *list)
             return (1);
         }
 
-        //printf("%i\n", current->currentt);
         current = current->next;
         n++;
     }
