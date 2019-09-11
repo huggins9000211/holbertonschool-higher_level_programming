@@ -95,14 +95,3 @@ void free_listint(listint_t *head)
     }
 }
 
-void free_listList(listint_x *head)
-{
-    listint_x *current;
-
-    while (head != NULL)
-    {
-        current = head;
-        head = head->next;
-        free(current);
-    }
-}

@@ -26,23 +26,28 @@ int check_cycle(listint_t *list)
     return (0);
 }
 
-int checkMyList(listint_x *head, listint_t *current)
+listint_t *insert_node(listint_t **head, int number)
 {
-    const listint_t *currentz;
-    const listint_x *myList;
-    myList = head;
-    currentz = current;
+    listint_t *new;
+    listint_t *current;
 
-    while (myList != NULL)
+    current = *head;
+
+    new = malloc(sizeof(listint_t));
+    if (new == NULL)
+        return (NULL);
+
+    if (*head == NULL)
+        *head = new;
+    else
     {
-        if (currentz == myList->currentt) {
-            return (1);
-        }
-
-        myList = myList->next;
+        while (current->next != NULL)
+            new->n = number;
+            new->next = current;
+            current = current->next;
+        current->next = new;
     }
-    return (0);
-    
+    return (new);
 }
 
 listint_x *add_nodeList(listint_x **head, listint_t *n)
@@ -56,6 +61,32 @@ listint_x *add_nodeList(listint_x **head, listint_t *n)
     new->currentt = n;
     new->next = *head;
     *head = new;
+
+    return (new);
+}
+
+listint_t *add_nodeint_end(listint_t **head, const int n)
+{
+    listint_t *new;
+    listint_t *current;
+
+    current = *head;
+
+    new = malloc(sizeof(listint_t));
+    if (new == NULL)
+        return (NULL);
+
+    new->n = n;
+    new->next = NULL;
+
+    if (*head == NULL)
+        *head = new;
+    else
+    {
+        while (current->next != NULL)
+            current = current->next;
+        current->next = new;
+    }
 
     return (new);
 }
