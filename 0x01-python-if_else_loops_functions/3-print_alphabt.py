@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 myStr = "abcdfghijklmnoprstuvwxyz"
-print('{}'.format(myStr), end='')
+for x in myStr:
+    print('{}'.format(myStr), end='')
