@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import hidden_4 as x
+    import hidden_4 as 
     print(x)
-    
