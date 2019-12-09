@@ -2,76 +2,27 @@
 
 int check_cycle(listint_t *list)
 {
-    listint_x *myList;
-    listint_t *current;
-    unsigned int n; /* number of nodes */
+    listint_t *slow = list;
+    listint_t *fast = list->next;
 
-    myList = NULL;
-    current = list;
+    while (slow)
+    {
+        if (slow == fast)
+        {
+            return (1);
+        }
+        slow = slow->next;
+        fast = fast->next;
+        if (fast)
+        {
+            fast = fast->next;
+        }
+        else
+        {
+            fast = list;
+        }
+        
+    }
     return (0);
-}
-
-listint_t *insert_node(listint_t **head, int number)
-{
-    listint_t *new;
-    listint_t *current;
-
-    current = *head;
-
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-        return (NULL);
-
-    if (*head == NULL)
-        *head = new;
-    else
-    {
-        while (current->next != NULL)
-            new->n = number;
-            new->next = current;
-            current = current->next;
-        current->next = new;
-    }
-    return (new);
-}
-
-listint_x *add_nodeList(listint_x **head, listint_t *n)
-{
-    listint_x *new;
-
-    new = malloc(sizeof(listint_x));
-    if (new == NULL)
-        return (NULL);
-
-    new->currentt = n;
-    new->next = *head;
-    *head = new;
-
-    return (new);
-}
-
-listint_t *add_nodeint_end(listint_t **head, const int n)
-{
-    listint_t *new;
-    listint_t *current;
-
-    current = *head;
-
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-        return (NULL);
-
-    new->n = n;
-    new->next = NULL;
-
-    if (*head == NULL)
-        *head = new;
-    else
-    {
-        while (current->next != NULL)
-            current = current->next;
-        current->next = new;
-    }
-
-    return (new);
+    
 }
