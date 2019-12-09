@@ -8,21 +8,6 @@ int check_cycle(listint_t *list)
 
     myList = NULL;
     current = list;
-    n = 0;
-    while (current != NULL)
-    {
-        if (n == 0)
-        {
-            add_nodeList(&myList, current);
-        }
-        else if (checkMyList(myList, current))
-        {
-            return (1);
-        }
-
-        current = current->next;
-        n++;
-    }
     return (0);
 }
 
