@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    my_string.translate({ord('c'): None})
-    my_string.translate({ord('C'): None})
+    translation_table = dict.fromkeys(map(ord, 'cC'), None)
+    my_string = my_string.translate(translation_table)
     return(my_string)
