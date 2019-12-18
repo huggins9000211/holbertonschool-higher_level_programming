@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-    laragest = 0
+    laragest = -float('inf')
     for x in my_list:
         if(x > laragest):
             laragest = x
