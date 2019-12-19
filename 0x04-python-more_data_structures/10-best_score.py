@@ -7,4 +7,4 @@ def best_score(a_dictionary):
                 best = (x, y)
     if best[1] == -float("inf"):
         return None
-    return(best[1])
+    return(best[0])
