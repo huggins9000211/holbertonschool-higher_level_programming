@@ -29,7 +29,7 @@ def roman_to_int(roman_string):
         else:
             res = res + s1
             i = i + 1
-    if type(roman_string) != str or roman_string == None:
+    if type(roman_string) != str or roman_string is None:
         return 0
     else:
         return res
