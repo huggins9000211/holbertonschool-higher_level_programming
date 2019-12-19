@@ -32,7 +32,8 @@ def roman_to_int(roman_string):
             i = i + 1
     if type(roman_string) != str or roman_string == None:
         return 0
-    return res
+    else:
+        return res
 
 def value(r): 
     if (r == 'I'): 
