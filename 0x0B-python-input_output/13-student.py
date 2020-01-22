@@ -24,7 +24,7 @@ class Student():
                     myDict[x] = temp
             return (myDict)
         return (self.__dict__)
-    
+
     def reload_from_json(self, json):
         """File I/O"""
         for x, y in json.items():

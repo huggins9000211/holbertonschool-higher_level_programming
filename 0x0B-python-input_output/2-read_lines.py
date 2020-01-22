@@ -11,7 +11,7 @@ def read_lines(filename="", nb_lines=0):
     i = 0
     with open(filename, "r") as f:
         for line in f:
-            print(line)
+            print(line, end="")
             i += 1
             if i is nb_lines:
                 break
