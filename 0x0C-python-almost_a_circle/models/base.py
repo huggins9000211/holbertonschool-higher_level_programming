@@ -97,10 +97,14 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ Circle """
-        newObj = cls(1, 1)
-        newObj.update(**dictionary)
-        return newObj
-
+        if cls.__name__ == "Rectangle":
+            newObj = cls(1, 1)
+            newObj.update(**dictionary)
+            return newObj
+        else:
+            newObj = cls(1)
+            newObj.update(**dictionary)
+            return newObj
     @classmethod
     def load_from_file(cls):
         """ Circle """
