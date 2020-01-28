@@ -105,6 +105,7 @@ class Base:
             newObj = cls(1)
             newObj.update(**dictionary)
             return newObj
+
     @classmethod
     def load_from_file(cls):
         """ Circle """
