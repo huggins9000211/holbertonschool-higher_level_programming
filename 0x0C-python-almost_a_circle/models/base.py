@@ -17,6 +17,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def draw(list_rectangles, list_squares):
         """ Circle """
         myTurtle = turtle.Turtle()
@@ -87,6 +88,10 @@ class Base:
     def save_to_file(cls, list_objs):
         """ Circle """
         myList = []
+        if list_objs is None:
+            with open("{}.json".format(cls.__name__), 'w') as f:
+            f.write(myList)
+            return
         for x in list_objs:
             myList.append(x.to_dictionary())
         with open("{}.json".format(cls.__name__), 'w') as f:
