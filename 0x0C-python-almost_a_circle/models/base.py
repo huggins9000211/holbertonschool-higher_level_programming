@@ -88,10 +88,6 @@ class Base:
     def save_to_file(cls, list_objs):
         """ Circle """
         myList = []
-        if list_objs is None:
-            with open("{}.json".format(cls.__name__), 'w') as f:
-            f.write(myList)
-            return
         for x in list_objs:
             myList.append(x.to_dictionary())
         with open("{}.json".format(cls.__name__), 'w') as f:
