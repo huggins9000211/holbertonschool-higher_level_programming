@@ -87,6 +87,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ Circle """
+        if list_objs is None:
+            list_objs = []
         myList = []
         for x in list_objs:
             myList.append(x.to_dictionary())
