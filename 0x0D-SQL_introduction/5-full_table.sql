@@ -1,3 +1,3 @@
 -- Show databases
 -- Show databases
-DESC first_table;
+SHOW CREATE TABLE first_table;
