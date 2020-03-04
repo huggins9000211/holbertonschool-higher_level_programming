@@ -1,6 +1,6 @@
 -- Show databases
 -- Show databases
-CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa
 -- Show databases
 USE hbtn_0d_usa
 -- Show databases
