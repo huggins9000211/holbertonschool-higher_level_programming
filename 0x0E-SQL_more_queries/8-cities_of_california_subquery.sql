@@ -1,6 +1,5 @@
 -- Show databases
 -- Show databases
-SELECT id, name FROM cities 
-WHERE state_id = (
-    SELECT MAX(id) FROM states WHERE name = California
-)ORDER BY id ASC;
+SELECT cities.id, cities.name FROM cities, states 
+WHERE states.name = 'California' AND states.id = cities.state_id
+ORDER BY id ASC;
