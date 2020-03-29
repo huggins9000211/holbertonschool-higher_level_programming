@@ -16,3 +16,4 @@ if __name__ == "__main__":
     newS.name = "Louisiana"
     session.add(newS)
     session.commit()
+    print(newS.id)
