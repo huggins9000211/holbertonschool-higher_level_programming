@@ -3,11 +3,12 @@
 if __name__ == "__main__":
     import MySQLdb
     import sys
+    query = """SELECT id, name FROM states
+    WHERE name = '{}' ORDER BY id""".format(sys.argv[4])
     db = MySQLdb.connect(
         user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    c.execute("""SELECT id, name FROM states
-    WHERE name = %s ORDER BY id""", (sys.argv[4],))
+    c.execute(query)
     states = c.fetchall()
     for x in states:
         print(x)
