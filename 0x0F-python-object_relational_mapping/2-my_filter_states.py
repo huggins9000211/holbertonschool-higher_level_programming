@@ -11,4 +11,5 @@ if __name__ == "__main__":
     c.execute(query)
     states = c.fetchall()
     for x in states:
-        print(x)
+        if x[1] == 'Arizona':
+            print(x)
