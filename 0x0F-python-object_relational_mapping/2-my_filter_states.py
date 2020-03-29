@@ -11,5 +11,5 @@ if __name__ == "__main__":
     c.execute(query)
     states = c.fetchall()
     for x in states:
-        if x[1] == 'Arizona':
+        if x[1] == sys.argv[4]:
             print(x)
