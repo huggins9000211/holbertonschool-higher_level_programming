@@ -10,4 +10,5 @@ if __name__ == "__main__":
     WHERE name REGEXP '^[n]' ORDER BY id""")
     states = c.fetchall()
     for x in states:
-        print(x)
+        if x[1][0] == 'N':
+            print(x)
