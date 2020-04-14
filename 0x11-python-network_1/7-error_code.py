@@ -7,7 +7,5 @@ if __name__ == "__main__":
     errCode = x.status_code
     if errCode >= 400:
         print("Error code: {}".format(errCode))
-    try:
+    else:
         print(x.text)
-    except Exception:
-        pass
