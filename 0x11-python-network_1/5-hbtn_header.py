@@ -4,4 +4,7 @@ if __name__ == "__main__":
     import requests
     import sys
     x = requests.get(sys.argv[1])
-    print(x.headers['X-Request-Id'])
+    try:
+        print(x.headers['X-Request-Id'])
+    except Exception:
+        pass
