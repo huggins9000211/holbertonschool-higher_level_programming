@@ -5,7 +5,7 @@ module.exports = class Square extends Rectangle {
     super(size, size);
   }
 
-  charPrint (c) {
+  charPrint (c = 'X') {
     const x = ''.padStart(this.width, c);
     let y = 0;
     while (y < this.height) {
