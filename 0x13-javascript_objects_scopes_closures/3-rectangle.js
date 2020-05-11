@@ -7,12 +7,12 @@ module.exports = class Rectangle {
     }
   }
 
-  print() {
-      const x = "".padStart(this.width, 'X');
-      let y = 0;
-      while (y < this.height) {
-          console.log(x);
-          y++;
-      }
+  print () {
+    const x = ''.padStart(this.width, 'X');
+    let y = 0;
+    while (y < this.height) {
+      console.log(x);
+      y++;
+    }
   }
 };
